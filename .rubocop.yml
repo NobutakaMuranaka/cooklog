@@ -56,3 +56,12 @@ Rails/HelperInstanceVariable:
 
 Layout/AlignHash:
   Enabled: false
+
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Style/MultilineTernaryOperator:
+  Enabled: false
