@@ -50,3 +50,9 @@ Layout/TrailingBlankLines:
 
 Layout/TrailingWhitespace:
   Enabled: false
+  
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+Layout/AlignHash:
+  Enabled: false
