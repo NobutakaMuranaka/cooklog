@@ -14,10 +14,20 @@ RSpec.describe "StaticPages", type: :system do
       it "正しいタイトルが表示されることを確認" do
         expect(page).to have_title full_title
       end
+    end
       
     context "料理フィード", js: true do
         let!(:user) { create(:user) }
         let!(:dish) { create(:dish, user: user) }
+        
+        before do
+          login_for_system(user)
+        end
+        
+        it "「新しい料理を作る」リンクが表示されること" do
+         visit root_path
+         expect(page).to have_link "新しい料理を作る", href: new_dish_path
+        end
 
         it "料理のぺージネーションが表示されること" do
           login_for_system(user)
@@ -59,5 +69,4 @@ RSpec.describe "StaticPages", type: :system do
       expect(page).to have_title full_title('利用規約')
     end
   end
-
 end
