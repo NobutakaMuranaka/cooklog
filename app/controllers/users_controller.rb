@@ -60,6 +60,7 @@ class UsersController < ApplicationController
 
   private
 
+    # ユーザー新規作成時に許可する属性
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
