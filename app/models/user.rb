@@ -46,11 +46,9 @@ class User < ApplicationRecord
       Dish.where("user_id = ?", id)
     end  
 
-    private
+  private
    
       def downcase_email
         self.email = email.downcase
       end
-    
-    end
 end
