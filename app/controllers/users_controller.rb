@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   
   def index
     @users = User.paginate(page: params[:page])
+    binding.pry
   end
 
   def show
@@ -78,5 +79,4 @@ class UsersController < ApplicationController
         redirect_to(root_url)
       end
     end
-    
 end

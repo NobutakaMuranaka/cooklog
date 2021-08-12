@@ -22,7 +22,6 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
-  
   end
 
     # 永続セッションのためにユーザーをデータベースに記憶する
@@ -46,11 +45,9 @@ class User < ApplicationRecord
       Dish.where("user_id = ?", id)
     end  
 
-    private
+  private
    
       def downcase_email
         self.email = email.downcase
       end
-    
-    end
 end
